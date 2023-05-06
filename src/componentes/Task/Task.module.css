@@ -1,0 +1,12 @@
+.containerTask {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.tarea {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
