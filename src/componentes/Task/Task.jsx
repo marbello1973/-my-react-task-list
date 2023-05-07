@@ -1,23 +1,32 @@
-import RadioButton from "../RadioButton/RadioButton";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteTask } from "../../features/task/taskSlice";
+import { Link } from "react-router-dom";
 import styles from "./Task.module.css";
+
 function Task() {
+  const tasks = useSelector((state) => state.task);
+  const dispath = useDispatch();
+
+  const handleDelete = (id) => {
+    dispath(deleteTask(id));
+  };
+
   return (
-    <>
-      <div className={styles.containerTask}>
-        <div className={styles.tarea}>
-          <div>
-            <RadioButton />
-          </div>
-          <div>
-            <h2>tipo de tarea</h2>
-          </div>
+    <div className={styles.containerTask}>
+      <header>
+        <h2>Tarea{tasks.length}</h2>
+        <Link to={"/"}>
+          <h2>crear tarea</h2>
+        </Link>
+      </header>
+      {tasks.map((el) => (
+        <div key={el.id}>
+          <h3>{el.titulo}</h3>
+          <p>{el.description}</p>
+          <button onClick={() => handleDelete(el.id)}>eliminar</button>
         </div>
-        <div>
-          <img src="./public/task48.svg" alt="write" />
-          <img src="./public/delete48.svg" alt="write" />
-        </div>
-      </div>
-    </>
+      ))}
+    </div>
   );
 }
 

@@ -1,19 +1,13 @@
-import Home from "./views/Home/Home";
 import TaskList from "./views/TaskList/TaskList";
 import styles from "./App.module.css";
+import Header from "./componentes/Header/Header";
 
 function App() {
   return (
-    <>
-      <div className={styles.containerApp}>
-        <div>
-          <Home />
-        </div>
-        <div>
-          <TaskList />
-        </div>
-      </div>
-    </>
+    <div className={styles.containerApp}>
+      <Header />
+      <TaskList />
+    </div>
   );
 }
 
