@@ -24,6 +24,9 @@ function Task() {
           <h3>{el.titulo}</h3>
           <p>{el.description}</p>
           <button onClick={() => handleDelete(el.id)}>eliminar</button>
+          <Link to={`/edit/${el.id}`}>
+            <button>edit</button>
+          </Link>
         </div>
       ))}
     </div>

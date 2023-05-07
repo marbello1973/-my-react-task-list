@@ -9,7 +9,8 @@ function TaskList() {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<FormTask />} />
-          <Route path="/CrearTarea" element={<Task />} />
+          <Route path="/create" element={<Task />} />
+          <Route path="/edit/:id" element={<FormTask />} />
         </Routes>
       </BrowserRouter>
     </div>

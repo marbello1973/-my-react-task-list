@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addTask } from "../../features/task/taskSlice";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTask, updateTask } from "../../features/task/taskSlice";
 import { v4 as uuid } from "uuid";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./FormTask.module.css";
 
 function FormTask() {
@@ -12,6 +12,8 @@ function FormTask() {
   });
   const dispath = useDispatch();
   const navigate = useNavigate();
+  const params = useParams();
+  const editTask = useSelector((state) => state.task);
 
   const handleChange = (e) => {
     setTask({
@@ -22,14 +24,25 @@ function FormTask() {
 
   const handelSubmit = (e) => {
     e.preventDefault();
-    dispath(
-      addTask({
-        ...task,
-        id: uuid(),
-      })
-    );
-    navigate("/CrearTarea");
+
+    if (params.id) {
+      dispath(updateTask(task));
+    } else {
+      dispath(
+        addTask({
+          ...task,
+          id: uuid(),
+        })
+      );
+    }
+    navigate("/create");
   };
+
+  useEffect(() => {
+    if (params.id) {
+      setTask(editTask.find((el) => el.id === params.id));
+    }
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -40,13 +53,15 @@ function FormTask() {
           type="text"
           placeholder="titulo"
           onChange={handleChange}
+          value={task.titulo}
         />
         <textarea
           name="description"
           placeholder="description"
           onChange={handleChange}
+          value={task.description}
         />
-        <button>Add</button>
+        <button>Guardar</button>
       </form>
     </div>
   );
