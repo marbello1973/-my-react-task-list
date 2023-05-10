@@ -5,7 +5,7 @@ import styles from "./TaskList.module.css";
 
 function TaskList() {
   return (
-    <div className={styles.container}>
+    <div className={styles.containerTaskList}>
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<FormTask />} />

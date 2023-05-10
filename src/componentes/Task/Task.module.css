@@ -1,5 +1,68 @@
 .containerTask {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
   align-items: center;
+  width: 250px;
+  height: 150px;
+}
+
+.tareas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navlink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.navlink :hover {
+  color: green;
+  transition: 0.8s;
+}
+
+.containerTaskCard {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.taskCard {
+  display: flex;
+  align-items: baseline;
+}
+
+.taskCard h3 {
+  margin: 1rem;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.taskCard p {
+  margin: 1rem;
+  border: 1px solid green;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.taskCard button {
+  margin: 1rem;
+  width: 4rem;
+  height: 2rem;
+  outline: none;
+  border-style: none;
+  background: green;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 0.2rem;
 }

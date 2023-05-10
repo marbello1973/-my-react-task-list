@@ -9,3 +9,40 @@
   flex-direction: column;
   align-items: center;
 }
+
+.container input {
+  color: rgb(177, 177, 177);
+  height: 2rem;
+  font-size: 1rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.container textarea {
+  color: rgb(177, 177, 177);
+  height: 4rem;
+  font-size: 1rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.container ::placeholder {
+  color: rgb(78, 78, 78);
+  opacity: 0.5;
+}
+
+.container .button {
+  outline: none;
+  border-style: none;
+  border-radius: 0.5rem;
+  height: 2rem;
+  font-size: 0.9rem;
+  background: green;
+  cursor: pointer;
+}
+
+.button :hover {
+  color: greenyellow;
+}
