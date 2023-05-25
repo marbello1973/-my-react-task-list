@@ -1,68 +1,99 @@
 .containerTask {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 150px;
 }
 
-.tareas {
+.containerCard {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  /* border: 1px solid rgba(115, 115, 115, 0.75); */
+  width: 300px;
+  border-radius: 5px;
 }
 
+.numeroTarae {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 102, 255);
+  font-size: 14px;
+}
+
+.crearTarea {
+  color: rgb(182, 182, 182);
+  background: linear-gradient(rgb(0, 102, 255), rgb(0, 102, 255));
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  /* border: 2px solid rgb(255, 255, 255, 0.75); */
+  border-radius: 5px;
+  font-size: 19px;
+  transition: 0.4s;
+}
+.crearTarea:hover {
+  color: rgb(204, 225, 255);
+  background: linear-gradient(rgba(85, 85, 85, 0.75), rgba(46, 46, 46, 0.75));
+}
 .navlink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-decoration: none;
-  color: white;
-}
-
-.navlink :hover {
-  color: green;
-  transition: 0.8s;
+  transition: 0.4s;
 }
 
 .containerTaskCard {
   display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  width: 300px;
 }
 
-.taskCard {
+.containerTitle {
   display: flex;
-  align-items: baseline;
-}
-
-.taskCard h3 {
-  margin: 1rem;
-}
-
-.sectionTitle {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(rgba(85, 85, 85, 0.75), rgba(46, 46, 46, 0.75));
   align-items: center;
+  gap: 1em;
+  width: 300px;
+  height: auto;
+  border: 1px solid rgba(164, 164, 164, 0.75);
+  border-radius: 5px;
+}
+.containerTitle h3 {
+  font-size: 18px;
+  color: rgba(204, 204, 204, 0.75);
 }
 
-.taskCard p {
-  margin: 1rem;
-  border: 1px solid green;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
+.containerTitle p {
+  color: rgba(164, 164, 164, 0.75);
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba(164, 164, 164, 0.75);
+  border-left: 1px solid rgba(164, 164, 164, 0.75);
+  border-right: 1px solid rgba(164, 164, 164, 0.75);
+  border-radius: 5px;
 }
 
-.taskCard button {
-  margin: 1rem;
-  width: 4rem;
-  height: 2rem;
-  outline: none;
-  border-style: none;
-  background: green;
-  cursor: pointer;
-  font-size: 0.9rem;
-  border-radius: 0.2rem;
+.buttonEliminar {
+  width: 60px;
+  background: linear-gradient(rgba(251, 0, 0, 0.75), rgba(102, 0, 0, 0.737));
+  border: none;
+  border-radius: 2px;
+}
+
+.buttonEditar {
+  width: 60px;
+  background: linear-gradient(rgb(0, 251, 25), rgba(12, 102, 0, 0.737));
+  border: none;
+  border-radius: 2px;
 }

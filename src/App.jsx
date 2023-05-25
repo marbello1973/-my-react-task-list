@@ -5,8 +5,12 @@ import Header from "./componentes/Header/Header";
 function App() {
   return (
     <div className={styles.containerApp}>
-      <Header />
-      <TaskList />
+      <div>
+        <Header />
+      </div>
+      <div>
+        <TaskList />
+      </div>
     </div>
   );
 }

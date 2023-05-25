@@ -6,13 +6,15 @@ import styles from "./TaskList.module.css";
 function TaskList() {
   return (
     <div className={styles.containerTaskList}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" exact element={<FormTask />} />
-          <Route path="/create" element={<Task />} />
-          <Route path="/edit/:id" element={<FormTask />} />
-        </Routes>
-      </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" exact element={<FormTask />} />
+            <Route path="/create" element={<Task />} />
+            <Route path="/edit/:id" element={<FormTask />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }

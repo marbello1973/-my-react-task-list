@@ -1,9 +1,12 @@
 import styles from "./Header.module.css";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <div className={styles.container}>
-      <h1>Lista De Tareas</h1>
+      <div className={styles.containerh1}>
+        <h1>Lista de tareas</h1>
+      </div>
     </div>
   );
 }

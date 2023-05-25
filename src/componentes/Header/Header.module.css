@@ -1,3 +1,12 @@
 .container {
-  margin: 0;
+  width: 300px;
+  height: auto;
+  background: linear-gradient(rgba(85, 85, 85, 0.75), rgba(46, 46, 46, 0.75));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(46, 46, 46, 0.75);
+  border-radius: 8px;
+  margin-top: 5em;
+  color: rgb(0, 102, 255);
 }
