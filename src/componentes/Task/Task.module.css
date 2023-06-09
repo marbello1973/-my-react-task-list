@@ -42,6 +42,10 @@
 .crearTarea:hover {
   color: rgb(204, 225, 255);
   background: linear-gradient(rgba(85, 85, 85, 0.75), rgba(46, 46, 46, 0.75));
+  border-bottom: 2px solid rgba(164, 164, 164, 0.75);
+  border-left: 2px solid rgba(164, 164, 164, 0.75);
+  border-right: 2px solid rgba(164, 164, 164, 0.75);
+  border-radius: 5px;
 }
 .navlink {
   text-decoration: none;
@@ -86,7 +90,7 @@
 
 .buttonEliminar {
   width: 60px;
-  background: linear-gradient(rgba(251, 0, 0, 0.75), rgba(102, 0, 0, 0.737));
+  background: linear-gradient(rgba(251, 0, 0, 0.75), rgba(37, 0, 0, 0.823));
   border: none;
   border-radius: 2px;
 }
