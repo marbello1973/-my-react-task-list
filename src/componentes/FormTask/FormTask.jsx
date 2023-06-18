@@ -44,6 +44,10 @@ function FormTask() {
     }
   }, []);
 
+  // useEffect(() => {
+  //   localStorage.setItem("Tareas", JSON.stringify(task));
+  // }, [task]);
+
   return (
     <div className={styles.container}>
       <form onSubmit={handelSubmit} autoComplete="none">
